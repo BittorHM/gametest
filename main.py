@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 
-import webapp2
+from flask import Flask
 
-class MainHandler(webapp2.RequestHandler):
-    def get(self):
-        self.response.write('Hello, World!')
+app = Flask(__name__)
 
-app = webapp2.WSGIApplication([
-    ('/', MainHandler)
-], debug=True)
+@app.route("/")
+def index():
+    return "Hello Bittor"
+
+
