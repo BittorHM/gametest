@@ -12,10 +12,6 @@ def index():
 def index2():
     return "Hello Cloud"
 
-@app.route("/login")
-def login():
-    return "Will login here"
-
 
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080, debug=True)
